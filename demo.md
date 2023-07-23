@@ -36,3 +36,11 @@ option to modify role definition after creation unless we go for custom role cre
 action > security >modify iam roles
 
 summary 21/7 ---------------> roles , MFA , policies
+
+principle action resources
+>identity_base_polices  resources_base_polices
+
+role 
+less human interaction 
+temp access
+communication between 2 services
