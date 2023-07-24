@@ -44,3 +44,36 @@ role
 less human interaction 
 temp access
 communication between 2 services
+
+
+
+--------------------------------------------------------------------------------------
+24/07
+# s3 in aws
+[global service]
+> scalable 
+> high available
+> durable
+
+### S3 is used for
+>- storing static website hosting (html+css+js), media storage & distribution, backups, archivals, log collection, application development artifacts like jars or war files, mobile app deploys and other similar types of assets required by your applications
+
+region ---> geolocation data centre
+availability zone ------> group of racks located within region
+bucket name must be unique globally across all regions
+
+object --> data + metadata
+s3 use object 
+
+## bucket
+bucket name must be unique globally across all regions
+s3 url >bucket url
+copy url > object url
+
+transfer acceleration 
+(speeding up uploads and downloads)---> for large files over slow internet connections
+CDN 
+(content delivery network )---> distributes content around worldwide edge locations
+### versioning
+keep multiple versions of an object. when you update a file, the previous version is saved as
+well so that if there's any problem with new updates we have older copies still intact.
