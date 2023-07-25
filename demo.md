@@ -77,3 +77,26 @@ CDN
 ### versioning
 keep multiple versions of an object. when you update a file, the previous version is saved as
 well so that if there's any problem with new updates we have older copies still intact.
+
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+bucket policies
+: allows fine-grained control to users who are allowed or denied actions on specific buckets or objects
+
+type of bucket policies
+:           principle -> user
+                             action -> read only
+                             resource-> bucketname/*
+:resource base  resource->action
+
+identity  base   policies:
+s3 resource
+action 
+principle -> user
+
+resource base :
+princple ->user arn 
+action 
+resource -> bucket
