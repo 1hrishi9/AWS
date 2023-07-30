@@ -108,8 +108,43 @@ resource -> bucket
 --------------------------------------------------------------------------------------------------------------------------
 # 28/7
 
-## EC2 -- Elastic compute cloud 
+## EC2 -- Elastic compute cloud -----availibility specfic
 
 >to get access of instance via ssh 
 `` ssh  -i <key_name> ec2-user@<ip>  ``
+
+type of instance 
+1. general instance (balance memory & CPU)
+* t2 micro 
+* m5a.large
+* c4.xlarge
+2. Compute optimized instances (CPU)   (more cpu than RAM)
+* C5
+* M6g
+* R5d
+3. Memory Optimized Instances(RAM) (More RAM)
+* r5ad, x1e
+* i3en
+* z1d
+4. Accelerated computing instances for graphics and video processing workloads like DLAMI's from
+Nvidia (Graphic optimised)
+
+5.Storage optimised
+* IOPS intensive applications such as databases or big data analytics
+
+6. HPC optimised
+* High performance computing clusters with high core counts
+
+type of boot
+
+
+
+t2 t3 unlimated bottomneck , active director
+
+
+
+
+
+
+
 
