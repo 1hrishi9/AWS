@@ -144,10 +144,17 @@ t2 t3 unlimated bottomneck , active director
 
 
 ==========================================================================================================================
+
 # 02/8
 
 ## AMI 
+
 Amazon Machine Image is a template that contains the software configuration to launch an Amazon EC2 Instance
+
+
+# EBS Volume types
+
+![EBS Image](https://i.ytimg.com/vi/Z7ORHz1AUMI/maxresdefault.jpg)
 
 
 
