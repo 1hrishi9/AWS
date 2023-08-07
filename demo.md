@@ -157,7 +157,23 @@ Amazon Machine Image is a template that contains the software configuration to l
 ![EBS Image](https://i.ytimg.com/vi/Z7ORHz1AUMI/maxresdefault.jpg)
 
 
+## General purpose SSD (gp2)
+
+- GP2 is the default EBS Volume type for the amazon EC2 Instance
+- GP2 Volumes are backed by SSDs
+- General purpose , balances both price and performance
+- Ratio of 3 IOPS/GB with upto 10,000 IOPS {input/output Per Second}
+- Boot Volume having low latency
+  Volume size - 1GB-16TB
+
+======================================================================================================================
+
+# 05/8
+
+## EFS > port(2049)
+
+storage type > standard and one zone
 
 
-
-.
+lifecycle management
+transition into IA 
