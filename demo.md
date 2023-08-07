@@ -177,3 +177,49 @@ storage type > standard and one zone
 
 lifecycle management
 transition into IA 
+
+=======================================================================================================================
+# 07/8
+
+## security group > region specific 
+>security group is attact to NIC
+-Security Group acts as a virtual firewall in AWS
+-Security Group controls the traffic for one or more instances
+-Security Group only contains allow rules
+-Security Group is stateful
+-Security Group evaluate all rules before deciding whether to allow traffic
+-Security Group can be attached to multiple instances
+-Security Group can be attached to multiple ENI's
+-Security Group can be attached to multiple ELB's
+
+## NACL > subnet specific
+>Network Access Control List is an optional layer of security for your VPC that acts as a firewall for controlling traffic in and out of one or more subnets
+-NACLs are stateless
+-NACLs rules are evaluated in order
+-NACLs have separate inbound and outbound rules
+-NACLs can have allow and deny rules
+
+## Networking interfence
+-ENI > elastic network interface
+-Elastic Network Interface is a logical networking component in a VPC that represents a virtual network card
+-ENI can be created independently and attached to an EC2 Instance in the same AZ
+-ENI can be moved from one EC2 Instance to another EC2 Instance
+-ENI can be moved from one AZ to another AZ
+
+## elastic ip 
+-Elastic IP is a static public IPv4 address designed for dynamic cloud computing
+-Elastic IP is associated with your AWS account
+-Elastic IP can be associated with one EC2 Instance at a time
+-Elastic IP can be moved from one EC2 Instance to another EC2 Instance
+-Elastic IP can be moved from one AZ to another AZ
+-Elastic IP can be moved from one VPC to another VPC
+-Elastic IP can be moved from one AWS account to another AWS account
+
+## NIC 
+Network Interface Card is a hardware component that is installed in a computer so that it can be connected to a network
+NIC is a physical networking component
+NIC is a hardware component
+
+## name base hosting vs ip base hosting
+name base hosting > domain name
+ip base hosting > ip address
