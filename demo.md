@@ -223,3 +223,19 @@ NIC is a hardware component
 ## name base hosting vs ip base hosting
 name base hosting > domain name
 ip base hosting > ip address
+
+
+=========================================================================================================================
+# 09/8
+
+## load balancer
+>load balancer is a device that acts as a reverse proxy and distributes network or application traffic across a number of servers
+-Load Balancer is a device that distributes network or application traffic across a number of servers
+
+types of load balancer
+1. Application Load Balancer
+2. Network Load Balancer  
+3. Classic Load Balancer     ----> round robin format
+4. Gateway load balancer
+
+
