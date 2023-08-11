@@ -85,8 +85,8 @@ well so that if there's any problem with new updates we have older copies still 
 bucket policies
 : allows fine-grained control to users who are allowed or denied actions on specific buckets or objects
 
-type of bucket policies
-:           principle -> user
+type of bucket policies:
+           principle -> user
                              action -> read only
                              resource-> bucketname/*
 :resource base  resource->action
@@ -237,5 +237,74 @@ types of load balancer
 2. Network Load Balancer  
 3. Classic Load Balancer     ----> round robin format
 4. Gateway load balancer
+
+==========================================================================================================================
+# 10/8
+
+
+## application load balancer
+-Application Load Balancer is best suited for load balancing of HTTP and HTTPS traffic
+-Application Load Balancer operates at Layer 7 of the OSI model
+-Application Load Balancer supports path-based routing
+-Application Load Balancer supports host-based routing
+-Application Load Balancer supports containerized applications
+-Application Load Balancer supports Lambda functions
+-Application Load Balancer supports WebSockets
+
+## target group
+-Target Group is a logical grouping of targets (EC2 Instances, ECS Tasks, Lambda Functions) that you register with a load balancer
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+HTTP status codes are three-digit numbers returned by a web server to indicate the status of a client's request. These codes are grouped into different classes, each with its own meaning. Here are some common HTTP status codes along with their meanings:
+
+### 1xx Informational
+
+- **100 Continue:** The server has received the request headers and the client should proceed to send the request body.
+
+### 2xx Success
+
+- **200 OK:** The request has succeeded. The information returned with the response depends on the method used in the request.
+- **201 Created:** The request has been fulfilled, and a new resource has been created as a result.
+- **204 No Content:** The server successfully processed the request, but there is no content to send in the response.
+
+### 3xx Redirection
+
+- **301 Moved Permanently:** The requested page has been permanently moved to a new location.
+- **302 Found (or Moved Temporarily):** The requested page has been temporarily moved to a new location.
+- **304 Not Modified:** The client's cached version of the requested page is up to date, so the server responds with this status and no content.
+
+### 4xx Client Errors
+
+- **400 Bad Request:** The server cannot understand the request due to a client error (e.g., malformed request syntax).
+- **401 Unauthorized:** The request requires authentication, and the client hasn't provided valid credentials.
+- **403 Forbidden:** The client does not have permission to access the requested resource.
+- **404 Not Found:** The server could not find the requested resource.
+- **405 Method Not Allowed:** The method specified in the request (e.g., GET, POST) is not allowed for the resource.
+- **409 Conflict:** The request could not be completed due to a conflict with the current state of the target resource.
+
+### 5xx Server Errors
+
+- **500 Internal Server Error:** The server encountered an unexpected condition that prevented it from fulfilling the request.
+- **502 Bad Gateway:** The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed.
+- **503 Service Unavailable:** The server is currently unable to handle the request due to temporary overloading or maintenance of the server.
+
+Please note that this is not an exhaustive list, and there are additional HTTP status codes beyond these examples. The codes listed above are some of the most common ones you might encounter.
+
+To interpret HTTP status codes accurately, it's important to refer to the official HTTP specification (RFC 7231) or relevant documentation for the specific service you are working with, as their meanings can sometimes vary slightly depending on the context.
+
+======================================================================================================================
+# 11/8
+
+## auto scaling 
+>auto scaling is a service that automatically adjusts the capacity of your EC2 fleet according to the conditions you define 
+### horizontal auto scale
+>horizontal auto scale is a type of auto scaling that adds or removes EC2 instances to match the desired capacity, based on a metric that measures the average CPU utilization of the instances in the group
+### vertical auto scale
+>vertical auto scale is a type of auto scaling that adjusts the size of the EC2 instances in the group to match the desired capacity, based on a metric that measures the average CPU utilization of the instances in the group
 
 
