@@ -307,4 +307,40 @@ To interpret HTTP status codes accurately, it's important to refer to the offici
 ### vertical auto scale
 >vertical auto scale is a type of auto scaling that adjusts the size of the EC2 instances in the group to match the desired capacity, based on a metric that measures the average CPU utilization of the instances in the group
 
+types of vertical auto scaling
+1.static 
+2.dynamic
+3.scheduled
 
+------------------------------------------------------------------------------------------------------------------
+ ### 2 step to launch autoscaling
+1 launch template
+2 ASG
+
+### autoscaling group 
+>autoscaling group is a logical grouping of EC2 instances that share similar characteristics and are treated as a logical grouping for the purposes of scaling and management
+group capacity ---> 1 mininum 2.maximun  3.desired
+
+average scaling policy  
+
+conditon   ---- 50 >
+
+action  increase and decrease instance
+
+condition alarm action
+
+
+
+---------------------------------------------
+to add stress 
+
+yum install stress 
+stress --help
+
+yes > /dev/null &
+
+
+-------------------------------------------------------------------------------------------------
+==============================================================================================================================================================
+
+# 17/08
