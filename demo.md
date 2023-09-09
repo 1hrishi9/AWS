@@ -51,7 +51,7 @@ communication between 2 services
 24/07
 # s3 in aws
 [global service]
-> scalable 
+> scalable
 > high available
 > durable
 
@@ -63,7 +63,7 @@ availability zone ------> group of racks located within region
 bucket name must be unique globally across all regions
 
 object --> data + metadata
-s3 use object 
+s3 use object
 
 ## bucket
 bucket name must be unique globally across all regions
@@ -344,3 +344,53 @@ yes > /dev/null &
 ==============================================================================================================================================================
 
 # 17/08
+
+# 28/08
+ 
+ ## carier gateway
+  >carrier gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and other AWS services without imposing availability risks or bandwidth constraints on your network traffic
+
+  ## ldap
+  >Lightweight Directory Access Protocol is an open, vendor-neutral, industry standard application protocol for accessing and maintaining distributed directory information services over an Internet Protocol (IP) network
+
+  ## active directory 
+  >Active Directory is a directory service that Microsoft developed for Windows domain networks. It is included in most Windows Server operating systems as a set of processes and services
+
+
+  # vpn
+  >Virtual Private Network is a service that allows you to securely connect to a private network from a remote location, typically over the Internet
+
+  1. network id 
+  2. gateway
+  3. public  
+
+
+
+  # traffic mirrioring
+  >traffic mirroring is a feature that you can use to copy network traffic from an elastic network interface of Amazon EC2 instances
+
+## 09/09
+### cloudwatch
+>CloudWatch is a monitoring and observability service built for DevOps engineers, developers, site reliability engineers (SREs), and IT managers. CloudWatch provides you with data and actionable insights to monitor your applications, respond to system-wide performance changes, optimize resource utilization, and get a unified view of operational health
+
+### alarms
+>CloudWatch alarm watches a single metric over a time period that you specify, and performs one or more actions based on the value of the metric relative to a given threshold over a number of time periods
+### logs
+>CloudWatch Logs is a service for ingesting, storing, and accessing your log files from Amazon EC2 instances, AWS CloudTrail, Route 53, and other sources
+### dashboards
+>CloudWatch Dashboards is a service that you can use to create customized dashboards that you can use to monitor your AWS resources in a single view
+### metrics
+>CloudWatch Metrics is a service that you can use to collect data from your AWS resources and applications
+### events
+>CloudWatch Events is a service that you can use to route events from your AWS services to targets to automate actions
+### insights
+>CloudWatch Logs Insights is a service that you can use to interactively search and analyze your log data in Amazon CloudWatch Logs
+
+### how to send logs of service via cloudagent
+1.install cloudagent
+2.configure it
+<mark> configuration file of aws: /var/awslogs/etc/awslogs.conf </mark>
+3.add role so that instance can access the cloudwatch
+4.restart the service
+5.check the logs in cloudwatch
+6.create log group for each application

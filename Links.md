@@ -53,3 +53,19 @@
 [https://youtu.be/7xngnjfIlK4]
 
 =================================================================================================================
+
+
+
+#!/bin/bash
+
+# Get the website address.
+website="npl-c13857b49efdda21.elb.us-east-1.amazonaws.com"
+
+# Set the number of pings.
+count=100
+
+# Loop through the pings.
+for i in $(seq 1 $count); do
+  # Ping the website.
+  curl -c 1 $website
+done
