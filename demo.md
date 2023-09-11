@@ -394,3 +394,60 @@ yes > /dev/null &
 4.restart the service
 5.check the logs in cloudwatch
 6.create log group for each application
+
+## 11/09
+### RDS
+defination:
+- database as a service
+- managed relational databases
+- fully compatible with SQL standard
+- scales automatically, up or down based on demand
+- supports multi AZ deployment
+- backup & restore
+- read replicas
+- encryption at rest (in transit)
+- security features like IAM authentication, SSL connections etc...
+#### types
+##### single db
+- provisioned IOPS SSD storage
+- automated backups
+- automatic failover
+- scaling options
+##### Multi DB
+- shared storage
+- manual backups
+- cross region replication
+- point in time recovery
+- enhanced monitoring
+- auditing
+- read replicas
+##### Aurora
+- MySQL compatible engine
+- auto scaling
+- serverless architecture
+- global deployments
+- read replicas
+- zero downtime migration
+- encrypted storage
+- VPC only
+- multimaster
+- parallel query execution
+- high availability and durability
+- enterprise grade performance
+- support for PostgreSQL
+- data API
+- Amazon S3 integration
+- AWS PrivateLink
+- Oracle compatibility
+- native JSON support
+- built-in machine learning
+- local caching of frequently accessed data
+
+### rds proxy
+- secure access to your DBs from anywhere using the internet.
+- no need to open ports 5432/60017
+- can be used by multiple applications running on different EC2 instances without having to configure each application individually.
+### reverse proxy
+- a webserver that sits between clients and servers and forwards requests to them as appropriate.
+
+
