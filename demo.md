@@ -451,3 +451,65 @@ defination:
 - a webserver that sits between clients and servers and forwards requests to them as appropriate.
 
 
+# 12/09
+## route53
+- DNS service 
+### SOA
+- start of authority
+- contains information about the domain
+- name of the server that supplied the data for the zone
+- administrator of the zone
+- current version of the data file
+### NS
+- name server
+- contains a list of the authoritative name servers for the domain
+### A
+- address record
+- maps a hostname to a 32-bit IPv4 address
+### AAAA
+- IPv6 address record
+- maps a hostname to a 128-bit IPv6 address
+### CNAME
+- canonical name record
+- maps an alias name to a true or canonical domain name
+### MX
+- mail exchange record
+- maps a domain name to a list of mail exchange servers for that domain
+### PTR
+- pointer record
+- maps an IPv4 address to the canonical name for that host
+### SRV
+- service locator
+- specifies the location of services
+### TXT
+- text record
+- originally for arbitrary human-readable text in a DNS record
+### SPF
+- sender policy framework
+- specifies which hosts are allowed to send mail from a given domain name
+
+## routing policy
+### simple routing policy
+- use when you have a single resource that performs a given function for your domain
+### weighted routing policy
+- use when you want to distribute traffic across multiple resources based on weights assigned to each resource
+### latency routing policy
+- use when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency
+### failover routing policy
+- use when you want to configure active-passive failover
+### geolocation routing policy
+- use when you want to route traffic based on the location of your users
+### geoproximity routing policy
+- use when you want to route traffic based on the location of your resources and, optionally, shift traffic from resources in one location to resources in another
+### multivalue answer routing policy
+- use when you want Route 53 to respond to DNS queries with up to eight healthy records selected at random
+### ip based routing policy
+- use when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency for your users
+
+
+## 13/09
+
+### added certificate to website (SSL) via ACM
+- AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources
+- SSL/TLS certificates provisioned through AWS Certificate Manager are free
+
