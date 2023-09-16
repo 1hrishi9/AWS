@@ -720,3 +720,6 @@ Blue Green deployment provides an almost zero downtime solution, where a new ver
 Blue/green deployments require that the environment runs independently of the production database i.e. not maintained by Elastic Beanstalk if your application uses one. Because if the environment has an RDS DB instance attached to it, the data will not transfer over to the second environment and will be lost if the original environment is terminated
 Blue Green deployment entails a DNS change; hence, do not terminate the old environment until the DNS changes have been propagated and the old DNS records expire.
 DNS servers do not necessarily clear old records from their cache based on the time to live (TTL) you set on the DNS records.
+
+
+`hi`
