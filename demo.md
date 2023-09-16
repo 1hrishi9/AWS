@@ -722,5 +722,5 @@ Blue Green deployment entails a DNS change; hence, do not terminate the old envi
 DNS servers do not necessarily clear old records from their cache based on the time to live (TTL) you set on the DNS records.
 
 
-`hi`
-----------------------------------------------------------------------------
+`hi
+---
