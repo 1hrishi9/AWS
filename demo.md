@@ -670,3 +670,53 @@ For example, a business might choose to implement the repurchasing strategy by m
 - Increase speed and agility.
 - Stop spending money running and maintaining data centers.
 -   Go global in minutes.
+
+# AWS Elastic Beanstalk
+> AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS.
+
+## usecase
+1. Quickly launch web applications
+> Deploy scalable web applications in minutes without the complexity of provisioning and managing underlying infrastructure.
+2.Create mobile API backends for your applications
+>Use your favorite programming language to build mobile API backends, and Elastic Beanstalk will manage patches and updates.
+3. Replatform critical business applications
+>Migrate stateful applications off legacy infrastructure to Elastic Beanstalk and connect securely to your private network.
+
+
+
+### deployment strategy
+**All at Once Deployments**
+Elastic Beanstalk environment uses all-at-once deployments if it is created with a different client (API, SDK, or AWS CLI).
+All at Once deployments perform an in-place deployment on all instances at the same time.
+All at Once deployments are simple and fast, however, it would lead to downtime and the rollback would take time in case of any issues.
+**Rolling Deployments**
+Elastic Beanstalk environment uses rolling deployments if it is created with console or EB CLI.
+Elastic Beanstalk splits the environment’s EC2 instances into batches and deploys the new version of the application on the existing instance one batch at a time, leaving the rest of the instances in the environment running the old version.
+During a rolling deployment, part of the instances serves requests with the old version of the application, while instances in completed batches serve other requests with the new version.
+Elastic Beanstalk performs the rolling deployments as
+When processing a batch, detaches all instances in the batch from the load balancer, deploys the new application version, and then reattaches the instances.
+To avoid any connection issues when the instances are detached, connection draining can be enabled on the load balancer
+After reattaching the instances in a batch to the load balancer, ELB waits until they pass a minimum number of health checks (the Healthy check count threshold value), and then starts routing traffic to them.
+Elastic Beanstalk waits until all instances in a batch are healthy before moving on to the next batch.
+When all instances in the batch pass enough health checks to be considered healthy by ELB, the batch is complete.
+If a batch of instances does not become healthy within the command timeout, the deployment fails.
+If a deployment fails after one or more batches are completed successfully, the completed batches run the new version of the application while any pending batches continue to run the old version.
+If the instances are terminated from the failed deployment, Elastic Beanstalk replaces them with instances running the application version from the most recent successful deployment.
+**Rolling with Additional Batch Deployments**
+Rolling with Additional Batch deployments is helpful when you need to maintain full capacity during deployments.
+This deployment is similar to Rolling deployments, except they do not do an in-place deployment but a disposable one, launching a new batch of instances prior to taking any instances out of service
+When the deployment completes, Elastic Beanstalk terminates the additional batch of instances.
+Rolling with additional batch deployment does not impact the capacity and ensures full capacity during the deployment process.
+**Immutable Deployments**
+All at Once and Rolling deployment method updates existing instances.
+If you need to ensure the application source is always deployed to new instances, instead of updating existing instances, the environment can be configured to use immutable updates for deployments.
+Immutable updates are performed by launching a second Auto Scaling group is launched in the environment and the new version serves traffic alongside the old version until the new instances pass health checks.
+Immutable deployments can prevent issues caused by partially completed rolling deployments. If the new instances don’t pass health checks, Elastic Beanstalk terminates them, leaving the original instances untouched.
+**Blue Green Deployments**
+Elastic Beanstalk performs an in-place update when application versions are updated, which may result in the application becoming unavailable to users for a short period of time.
+Blue Green approach is suitable for deployments that depend on incompatible resource configuration changes or a new version that can’t run alongside the old version.
+Elastic Beanstalk enables the Blue Green deployment through the Swap Environment URLs feature.
+Blue Green deployment provides an almost zero downtime solution, where a new version is deployed to a separate environment, and then CNAMEs of the two environments are swapped to redirect traffic to the new version.
+Blue/green deployments require that the environment runs independently of the production database i.e. not maintained by Elastic Beanstalk if your application uses one. Because if the environment has an RDS DB instance attached to it, the data will not transfer over to the second environment and will be lost if the original environment is terminated
+Blue Green deployment entails a DNS change; hence, do not terminate the old environment until the DNS changes have been propagated and the old DNS records expire.
+DNS servers do not necessarily clear old records from their cache based on the time to live (TTL) you set on the DNS records.
