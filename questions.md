@@ -49,6 +49,59 @@ Here are some interview questions that you may be asked about TCP and UDP:
 * **Disadvantages of UDP:** Unreliable and unordered delivery.
 
 
+
+# Question
+
+## PUBLIC SUBNET VS PRIVATE SUBNET
+
+### Difference between Private and Public Subnet in AWS
+
+**Private Subnet:**
+
+* A private subnet is a subnet that does not have a direct route to the internet.
+* Resources in a private subnet cannot be accessed directly from the internet.
+* To access the internet, resources in a private subnet must use a NAT gateway or a bastion host.
+* Private subnets are typically used for resources that do not need to be publicly accessible, such as database servers and application servers.
+
+**Public Subnet:**
+
+* A public subnet is a subnet that has a direct route to the internet.
+* Resources in a public subnet can be accessed directly from the internet.
+* Public subnets are typically used for resources that need to be publicly accessible, such as web servers and load balancers.
+
+**Interview Point of View:**
+
+When answering an interview question about the difference between private and public subnets in AWS, you should be able to clearly explain the following:
+
+* **What is a subnet?**
+* **What is the difference between a public subnet and a private subnet?**
+* **What are the benefits of using private and public subnets?**
+* **When should you use a private subnet and when should you use a public subnet?**
+
+Here is an example of how you could answer an interview question about the difference between private and public subnets in AWS:
+
+> **Interviewer:** What is the difference between a private subnet and a public subnet in AWS?
+
+> **Candidate:** A private subnet is a subnet that does not have a direct route to the internet. Resources in a private subnet cannot be accessed directly from the internet. To access the internet, resources in a private subnet must use a NAT gateway or a bastion host. Private subnets are typically used for resources that do not need to be publicly accessible, such as database servers and application servers.
+
+> A public subnet is a subnet that has a direct route to the internet. Resources in a public subnet can be accessed directly from the internet. Public subnets are typically used for resources that need to be publicly accessible, such as web servers and load balancers.
+
+> **Interviewer:** What are the benefits of using private and public subnets?
+
+> **Candidate:** Private subnets provide better security for resources that do not need to be publicly accessible. By placing resources in a private subnet, you can help to protect them from unauthorized access and attacks.
+
+> Public subnets provide better performance for resources that need to be accessed from the internet. By placing resources in a public subnet, you can reduce latency and improve throughput.
+
+> **Interviewer:** When should you use a private subnet and when should you use a public subnet?
+
+> **Candidate:** You should use a private subnet for resources that do not need to be publicly accessible, such as database servers and application servers. You should use a public subnet for resources that need to be publicly accessible, such as web servers and load balancers.
+
+**Additional Tips:**
+
+* Be prepared to discuss the different ways to access the internet from resources in a private subnet.
+* Be prepared to discuss the different security considerations for public and private subnets.
+* Be prepared to provide examples of how you have used public and private subnets in the past.
+
 ## most asked
 ==========================================================================================================================
 
