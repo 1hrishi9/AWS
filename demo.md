@@ -722,7 +722,58 @@ Blue Green deployment entails a DNS change; hence, do not terminate the old envi
 DNS servers do not necessarily clear old records from their cache based on the time to live (TTL) you set on the DNS records.
 
 
-`hi
+-----------------------------------------------------------------------
+# 18/09
+""Elastic Compute Cloud (EC2) is a Cloud Computing Service""
+
+- Configure your EC2 by choosing your OS, Storage, Memory, Network Throughput.
+Launch and SSH into your server within minutes,
+
+- EC2 comes in variety Instance Types specialized for different roles:
+
+- General Purpose balance of compute, memory and networking resources
+
+- Compute Optimized ideal for compute bound applications that benefit from high performance processor
+Memory Optimized fast performance for workloads that process large data sets in memory.
+
+- Accelerated Optimized hardware accelerators, or co-processors
+
+- Storage Optimized high, sequential read and write access to very large data sets on local storage
+
+> Instance Sizes generally **double** in price and key attributes
+>Placement Groups let you to choose the logical placement of your instances to optimize for communication,
+performance or durability. Placement groups are free.
+
+> UserData a script that will be automatically run when launching an EC2 instance.
+
+> MetaData meta data about the current instance. You access this meta data via a local endpoint when SSH'd into
+
+
 ---
-![hrishi](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHZAq08u4YaR0Jsu2CgeptdxC74y-9QEeFYEAb6YHP&s)
-(![Alt text](ab67616d0000b27369ded2c843826973977ba84f.jpg))
+
+---
+## So you use Ubuntu ? Do you know about its boot flow ? Can you explain ?
+
+>🤓𝐌𝐞: Sure (grabs Marker and hops 🚀 infront of white board)
+
+𝟏. 𝐁𝐈𝐎𝐒/𝐔𝐄𝐅𝐈: It all starts with the Basic Input/Output System (BIOS) or Unified Extensible Firmware Interface (UEFI) initializing hardware and loading the bootloader.
+
+𝟐. 𝐁𝐨𝐨𝐭𝐥𝐨𝐚𝐝𝐞𝐫 (𝐆𝐑𝐔𝐁): GRand Unified Bootloader (GRUB) is a common choice. It allows you to choose your Linux kernel and initial RAM disk (initrd) if needed.
+
+𝟑. 𝐊𝐞𝐫𝐧𝐞𝐥 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧: ...
+
+🧐𝐈𝐧𝐭𝐞𝐫𝐯𝐢𝐞𝐰𝐞𝐫: Wait, can you elaborate more about Bootloader ? may be about its stages?
+
+😅𝐌𝐞: ok sure..
+
+𝟐.𝟏 𝐁𝐨𝐨𝐭𝐥𝐨𝐚𝐝𝐞𝐫 𝐒𝐭𝐚𝐠𝐞𝐬:
+
+Stage 1 (MBR/PBR): The first stage of GRUB is usually found in the Master Boot Record (MBR) or the Partition Boot Record (PBR) of the boot device. It's responsible for locating the next stage.
+
+Stage 1.5 (Optional): In complex storage setups, a Stage 1.5 may come into play, understanding file systems and facilitating the loading of Stage 2
+
+Stage 2 (core.img): The critical second stage of GRUB, stored in /boot/grub/, takes over. It presents the GRUB menu, loads the Linux kernel, and initializes the boot process.
+
+𝟑. 𝐊𝐞𝐫𝐧𝐞𝐥 𝐈𝐧𝐢𝐭𝐢𝐚𝐥𝐢𝐳𝐚𝐭𝐢𝐨𝐧: Post-GRUB, the Linux kernel (vmlinuz) and possibly the initial RAM disk (initrd.img) are loaded into memory. The kernel's start_kernel() function is executed, beginning the kernel's internal initialization process.
+
+𝟒. 𝐈𝐧𝐢𝐭-𝐫𝐚𝐦-𝐟𝐬, 𝐈𝐧𝐢𝐭 𝐏𝐫𝐨𝐜𝐞𝐬𝐬, 𝐚𝐧𝐝 𝐁𝐞𝐲𝐨𝐧𝐝: The process continues as we discussed earlier, with initramfs, the init process (often systemd in modern Ubuntu), and user-space services.
