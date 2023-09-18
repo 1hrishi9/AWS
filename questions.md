@@ -102,6 +102,8 @@ Here is an example of how you could answer an interview question about the diffe
 * Be prepared to discuss the different security considerations for public and private subnets.
 * Be prepared to provide examples of how you have used public and private subnets in the past.
 
+https://www.testpreptraining.com/blog/what-is-the-difference-between-public-and-private-subnet-in-aws/
+
 ## most asked
 ==========================================================================================================================
 
