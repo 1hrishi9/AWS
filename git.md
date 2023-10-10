@@ -106,17 +106,22 @@ bash
 [visual representation](https://onlywei.github.io/explain-git-with-d3/#merge)
 ---
 ---
-## git fetch  
+
+## git fetch   
 
 will download all branches and tags from the repository. It won't, however, merge any of this new data into your working files. Fetch is great for getting a fresh view on all the things that happened in a remote repository.  
 bash  
 
 ``git fetch origin``
 
-This command will fetch all branches from the repository origin. After fetching, you can see all branches with:  
-bash
+This command will fetch all branches from the repository origin. After fetching, you can see all branches with:   
+
+bash  
+
 ``git log remotes/origin/master..HEAD``
+
 [visual representation](https://onlywei.github.io/explain-git-with-d3/#fetch)
+
 ---
 ---
 ## git pull
