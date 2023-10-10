@@ -1,4 +1,4 @@
-###What is git ?
+### What is git ?
 >Git is a version control system that allows you to track changes to files and folders over time. It is distributed, meaning that the entire codebase and history is available on every developer's computer, which allows for easy branching and merging.
 ---
 ---
@@ -23,32 +23,34 @@
 ---
 ---
 ### list of git command and their defination
->git init: Create a new local repository
->git clone: Clone a repository into a new directory
->git add: Add file contents to the index
->git commit: Record changes to the repository
->git diff: Show changes between commits, commit and working tree, etc
->git reset: Reset current HEAD to the specified state
->git status: Show the working tree status
->git rm: Remove files from the working tree and from the index
->git log: Show commit logs
->git show: Show various types of objects
->git tag: Create, list, delete or verify a tag object signed with GPG
->git branch: List, create, or delete branches
->git checkout: Switch branches or restore working tree files
->git merge: Join two or more development histories together
->git remote: Manage set of tracked repositories
->git push: Update remote refs along with associated objects
->git pull: Fetch from and integrate with another repository or a local branch
->git stash: Stash the changes in a dirty working directory away
->git fetch: Download objects and refs from another repository
->git grep: Print lines matching a pattern
+-**git init**: Create a new local repository
+-**git clone**: Clone a repository into a new directory
+-**git add**: Add file contents to the index
+-**git commit**: Record changes to the repository
+-**git diff**: Show changes between commits, commit and working tree, etc
+-**git reset**: Reset current HEAD to the specified state
+-**git status**: Show the working tree status
+-**git rm**: Remove files from the working tree and from the index
+-**git log**: Show commit logs
+-**git show**: Show various types of objects
+-**git tag**: Create, list, delete or verify a tag object signed with GPG
+-**git branch**: List, create, or delete branches
+-**git checkout**: Switch branches or restore working tree files
+-**git merge**: Join two or more development histories together
+-**git remote**: Manage set of tracked repositories
+-**git push**: Update remote refs along with associated objects
+-**git pull**: Fetch from and integrate with another repository or a local branch
+-**git stash**: Stash the changes in a dirty working directory away
+-**git fetch**: Download objects and refs from another repository
+-**git grep**: Print lines matching a pattern
 
 ---
 ---
 
 ```
-**git reset** will move HEAD and the current branch back to wherever you specify, abandoning any commits that may be left behind. This is useful to undo a commit that you no longer need.
+
+## git reset
+ will move HEAD and the current branch back to wherever you specify, abandoning any commits that may be left behind. This is useful to undo a commit that you no longer need.
 
 This command is normally used with one of three flags: "--soft", "--mixed", and "--hard". The soft and mixed flags deal with what to do with the work that was inside the commit after you reset, and you can read about it here. Since this visualization cannot graphically display that work, only the "--hard" flag will work on this site.
 
