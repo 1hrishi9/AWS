@@ -47,7 +47,7 @@
 ---
 ---
 
-```
+
 
 ## git reset
  will move HEAD and the current branch back to wherever you specify, abandoning any commits that may be left behind. This is useful to undo a commit that you no longer need.
@@ -58,4 +58,3 @@ The ref "HEAD^" is usually used together with this command. "HEAD^" means "the c
 
 Note that you must never use git reset to abandon commits that have already been pushed and merged into the origin. This can cause your local repository to become out of sync with the origin. Don't do it unless you really know what you're doing.
 [visual representation](https://onlywei.github.io/explain-git-with-d3/#reset)
-```
