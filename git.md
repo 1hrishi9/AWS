@@ -23,26 +23,26 @@
 ---
 ---
 ### list of git command and their defination
--**git init**: Create a new local repository  
--**git clone**: Clone a repository into a new directory  
--**git add**: Add file contents to the index  
--**git commit**: Record changes to the repository  
--**git diff**: Show changes between commits, commit and working tree, etc  
--**git reset**: Reset current HEAD to the specified state  
--**git status**: Show the working tree status  
--**git rm**: Remove files from the working tree and from the index  
--**git log**: Show commit logs  
--**git show**: Show various types of objects  
--**git tag**: Create, list, delete or verify a tag object signed with GPG  
--**git branch**: List, create, or delete branches  
--**git checkout**: Switch branches or restore working tree files  
--**git merge**: Join two or more development histories together  
--**git remote**: Manage set of tracked repositories  
--**git push**: Update remote refs along with associated objects  
--**git pull**: Fetch from and integrate with another repository or a local branch   
--**git stash**: Stash the changes in a dirty working directory away  
--**git fetch**: Download objects and refs from another repository  
--**git grep**: Print lines matching a pattern  
+- **git init**: Create a new local repository  
+- **git clone**: Clone a repository into a new directory  
+- **git add**: Add file contents to the index  
+- **git commit**: Record changes to the repository  
+- **git diff**: Show changes between commits, commit and working tree, etc  
+- **git reset**: Reset current HEAD to the specified state  
+- **git status**: Show the working tree status  
+- **git rm**: Remove files from the working tree and from the index  
+- **git log**: Show commit logs  
+- **git show**: Show various types of objects  
+- **git tag**: Create, list, delete or verify a tag object signed with GPG  
+- **git branch**: List, create, or delete branches  
+- **git checkout**: Switch branches or restore working tree files  
+- **git merge**: Join two or more development histories together  
+- **git remote**: Manage set of tracked repositories  
+- **git push**: Update remote refs along with associated objects  
+- **git pull**: Fetch from and integrate with another repository or a local branch   
+- **git stash**: Stash the changes in a dirty working directory away  
+- **git fetch**: Download objects and refs from another repository  
+- **git grep**: Print lines matching a pattern  
 
 ---
 ---
