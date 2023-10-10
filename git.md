@@ -194,7 +194,8 @@ To apply one of these changes back on top of your working directory (without los
 
 bash
 
-``git stash apply``
+``git stash apply``   
+
 [visual representation](https://onlywei.github.io/explain-git-with-d3/#stash)
 
 ---
